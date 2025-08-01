@@ -2,7 +2,7 @@
 ._*
 
 *.asv
-*.m
+*.m~
 
 __pycache__/
 *.pyc
