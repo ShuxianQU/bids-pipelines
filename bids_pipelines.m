@@ -8,11 +8,6 @@ addpath(genpath('~/opt/bids'));
 addpath(genpath('~/Documents/moco-recon'));
 % add paths of '3dMPRAGEize' and 'AFNI' to the $PATH
 
-% 049+             054-             037-             050-              039+
-% session_20250130 session_20250206 session_20250213 session_20250220 session_20250227
-% % sub-037's tissue segmentations and registrations show odd
-% which are corrected by re-running smriprep part, but sub-050's remain wrong.
-% % sub-054 and sub-037 still imperfection up to now.
 subID= '039'; 
 sessionName= 'session_20250227';
 
