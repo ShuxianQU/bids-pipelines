@@ -79,7 +79,7 @@ function B0_fieldmap(path2refScan,mid_offlineRecon,methodofFM,varargin)
                 imgRefUncomb = squeeze(imgRefUncomb);
                 save('refUncomb.mat','imgRefUncomb','paraRef','mask3D');
         
-                path2RegularizedFM = '/home/naxos2-raid27/qu000109/opt/JeffFessler/MRIFieldmaps/b0map2.jl';
+                path2RegularizedFM = '~/JeffFessler/MRIFieldmaps/b0map2.jl';
                 cmd = ['julia  ',path2RegularizedFM,' ',filepath,filesep,'refUncomb.mat',' ',filepath];
                 % system(cmd); 
                 system(['unset LD_LIBRARY_PATH; ',cmd]);

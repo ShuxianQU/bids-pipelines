@@ -3,15 +3,13 @@
 %%%
 %%% created by Xiaoping on 10/21/2024
 
-addpath(genpath('~/opt/utils'));
-addpath(genpath('~/opt/bids'));
-addpath(genpath('~/Documents/moco-recon'));
+addpath(genpath('~/utils'));
 % add paths of '3dMPRAGEize' and 'AFNI' to the $PATH
 
 subID= '039'; 
 sessionName= 'session_20250227';
 
-parentDir_containers= '~/opt/my_images';
+parentDir_containers= '~/my_images';
 parentDir_bids= '/home/range6-raid17/wulab/105t/';
 path2bids= fullfile(parentDir_bids,'bids');
 projectName= 'amri_epi';
