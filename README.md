@@ -10,3 +10,8 @@ The pipeline fulfills the following steps:
 
 The pipeline assumes MP2RAGE to be used to define subject's native T1w space. 
 For compatibility with the sMRIPrep pipeline which is optimized for MPRAGE, MP2RAGE is MPRAGEized (mostly to clean up the UNI background) using tools shared at: https://github.com/srikash/3dMPRAGEise
+
+If you find the toolbox helpful, please consider citing the following ISMRM abstract:
+
+Qu, S., et al. Advancing whole-brain BOLD fMRI in humans at 10.5 Tesla with motion-robust 3D EPI and RF parallel transmission: initial experience, ISMRM 2025
+ 
