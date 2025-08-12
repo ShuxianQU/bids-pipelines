@@ -18,4 +18,4 @@ Advancing whole-brain BOLD fMRI in humans at 10.5 Tesla with motion-robust 3D EP
 
 ## Demonstrations
 To grab an idea of how the pipieline works in fMRI processing, you may run the demo script, `bids_pipelines.m`. 
-For this quick demonstration, you will need to download the low resolution example fMRI data (2 mm isotropic, 10 volumes) and the corresponding anatomical MP2RAGE images (1 mm isotropic) from the subfolder "bold-data" shared at [this google drive](https://drive.google.com/drive/folders/1cVI2BXiPV-lKmIz1KD7RiYVmy8S9kSTL?usp=drive_link). Note that the demo script assumes that the example fMRI and structural data are stored under "~/myData/bold-data". 
+Please create a folder 'bids' first. For this quick demonstration, you will need to download the low resolution example fMRI data (2 mm isotropic, 10 volumes) and the corresponding anatomical MP2RAGE images (1 mm isotropic) from the subfolder "bold-data" shared at [this google drive](https://drive.google.com/drive/folders/1cVI2BXiPV-lKmIz1KD7RiYVmy8S9kSTL?usp=drive_link). Note that the demo script assumes that the example fMRI and structural data are stored under "~/myData/bold-data". 
