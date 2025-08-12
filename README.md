@@ -11,7 +11,12 @@ The pipeline fulfills the following steps:
 The pipeline assumes MP2RAGE to be used to define subject's native T1w space. 
 For compatibility with the sMRIPrep pipeline which is optimized for MPRAGE, MP2RAGE is MPRAGEized (mostly to clean up the UNI background) using tools shared at: https://github.com/srikash/3dMPRAGEise
 
-If you find the toolbox helpful, please consider citing the following ISMRM abstract:
+We have demonstrated the utility of this pipeline for resting state BOLD functional MRI (fMRI) at 10.5 T and reported our findings in the following paper: 
 
-Qu, S., et al. Advancing whole-brain BOLD fMRI in humans at 10.5 Tesla with motion-robust 3D EPI and RF parallel transmission: initial experience, ISMRM 2025
+Advancing whole-brain BOLD fMRI in humans at 10.5 Tesla with motion-robust 3D EPI, parallel transmission and high-density RF receive coils. Shuxian Qu, Jiaen Liu, Peter van Gelderen, Jacco A. de Zwart, Jeff H. Duyn, Matt Waks, Russell Lagore, Alexander Bratch, Andrea Grant, Edward Auerbach, Lance Delabarre, Alireza Sadeghi-Tarakameh, Yigitcan Eryaman, Gregor Adriany, Kamil Ugurbil, and Xiaoping Wu. MRM 2025.
  
+
+## Demonstrations
+### BOLD fMRI 
+To grab an idea of how the pipieline works in fMRI processing, you may run the demo script, `bids_pipelines.m`. 
+For this quick demonstration, you will need to download the low resolution example fMRI data (2 mm isotropic, 10 volumes) and the corresponding anatomical MP2RAGE images (1 mm isotropic) from the subfolder "bold-data" shared at [this google drive](https://drive.google.com/drive/folders/1cVI2BXiPV-lKmIz1KD7RiYVmy8S9kSTL?usp=drive_link). Note that the demo script assumes that the example fMRI and structural data are stored under "~/myData/bold-data". 
