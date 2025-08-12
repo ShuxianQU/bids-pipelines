@@ -3,31 +3,29 @@
 %%%
 %%% created by Xiaoping on 10/21/2024
 
-addpath(genpath('~/utils'));
+addpath(genpath('~/myProjects/bids-pipelines'));
 % add paths of '3dMPRAGEize' and 'AFNI' to the $PATH
 
 subID= '039'; 
-sessionName= 'session_20250227';
 
-parentDir_containers= '~/my_images';
-parentDir_bids= '/home/range6-raid17/wulab/105t/';
+parentDir_containers= '~/opt/my_images';
+parentDir_bids= '~/myData/bold-data/';
 path2bids= fullfile(parentDir_bids,'bids');
 projectName= 'amri_epi';
 path2bidsNewProj= fullfile(path2bids,filesep,projectName);
 
 %
-path2dicoms= ['/home/range6-raid17/wulab/105t/',sessionName]; 
-% path2dicoms= ['/home/range6-raid4/xpwu-data/Siemens105T/',sessionName]; 
+path2dicoms= '~/myData/bold-data/'; 
 path2configJson= fullfile(path2bidsNewProj,'code','config.json');
 
 %
 path2raw= fullfile(path2dicoms,'raw'); % '/home/range6-raid4/xpwu-data/Siemens105T/session_20241024/raw';
 path2offlineRecon= fullfile(path2raw,'result'); % '/home/range6-raid4/xpwu-data/Siemens105T/session_20241024/raw/result'; 
-mid_offlineRecon= {'134' '138'}; %110 114
-PELabel= {'AP' 'PA'};
-mid_refScan= '132';
-reconMode= 'nomoco'; %'moco': motion and B0 correction; 'nomoco': no rigid motion correction; 'noco': no motion or B0 correction
-taskMode= 'EO'; %EO
+mid_offlineRecon= {'424'}; 
+PELabel= {'AP'};
+mid_refScan= '403';
+reconMode= 'moco'; %'moco': motion and B0 correction; 'nomoco': no rigid motion correction; 'noco': no motion or B0 correction
+taskMode= 'EC'; %EO
 switch reconMode
     case 'test'
         modifier= 'result_MoCo';
@@ -53,8 +51,8 @@ bSkipXcp= false;
 
 % If use mp2rage, mprageize it for t1w.
 bSkipT1wPrep= false; % true: t1w is ready, skipping mprageizing; false: to prep t1w by mprageizing mp2rage.
-seid_MP2RAGEinv2='009'; % MR-SE<xx>
-seid_MP2RAGEuni='010';
+seid_MP2RAGEinv2='007'; % MR-SE<xx>
+seid_MP2RAGEuni='008';
 
 subDir= fullfile(path2bidsNewProj,['sub-',subID]);
 %% step 1: dcm2bids
